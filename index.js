@@ -50,7 +50,7 @@ getLocation();
 
 // Get weather from the API provider
 function getWeather(latitudeCoord,longitudeCoord){
-  let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitudeCoord}&lon=${longitudeCoord}&appid=${key}`
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitudeCoord}&lon=${longitudeCoord}&appid=${key}`
   fetch(url).then(response=>{
       if(!response.ok){
         throw new Error(`${response.status} error == Failed to Fetch data`);
